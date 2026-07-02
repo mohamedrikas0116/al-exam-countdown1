@@ -1,0 +1,441 @@
+/* ==========================================================
+   A/L Exam Countdown
+   File: css/timer.css
+   Countdown • Pomodoro • Study Timer Styles
+========================================================== */
+
+/* ===========================
+   Countdown Section
+=========================== */
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.time-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+    transition: .3s;
+    animation: float 4s ease-in-out infinite;
+}
+
+.time-box:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.time-box span {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.time-box p {
+    margin-top: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: .9;
+}
+
+/* ===========================
+   Timer Displays
+=========================== */
+
+#pomodoroDisplay,
+#studyDisplay {
+    text-align: center;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 25px 0;
+    letter-spacing: 2px;
+    font-variant-numeric: tabular-nums;
+    transition: .3s;
+}
+
+/* ===========================
+   Running Animation
+=========================== */
+
+.timer-running {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.03);
+        opacity: .9;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+/* ===========================
+   Timer Buttons
+=========================== */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.buttons button {
+
+    min-width: 120px;
+
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    color: white;
+
+    background: var(--primary);
+
+    transition: .3s;
+
+}
+
+.buttons button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.buttons button:active {
+
+    transform: scale(.96);
+
+}
+
+/* Start */
+
+#startPomodoro,
+#studyStart {
+
+    background: var(--success);
+
+}
+
+/* Pause */
+
+#pausePomodoro,
+#studyPause {
+
+    background: var(--warning);
+
+}
+
+/* Reset */
+
+#resetPomodoro,
+#studyReset {
+
+    background: var(--danger);
+
+}
+
+/* ===========================
+   Mode Buttons
+=========================== */
+
+.modes {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+.modes button {
+
+    background: var(--surface);
+
+    color: var(--text);
+
+    border: 2px solid var(--primary);
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.modes button:hover,
+.modes button.active {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+/* ===========================
+   Subject Selector
+=========================== */
+
+#subject {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--border);
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-size: 15px;
+
+}
+
+/* ===========================
+   Circular Progress Ring
+=========================== */
+
+.timer-progress {
+
+    width: 230px;
+
+    height: 230px;
+
+    margin: 25px auto;
+
+    position: relative;
+
+}
+
+.timer-progress svg {
+
+    width: 100%;
+
+    height: 100%;
+
+    transform: rotate(-90deg);
+
+}
+
+.timer-progress circle {
+
+    fill: none;
+
+    stroke-width: 10;
+
+}
+
+.timer-progress .track {
+
+    stroke: #dbeafe;
+
+}
+
+.timer-progress .progress {
+
+    stroke: var(--primary);
+
+    stroke-linecap: round;
+
+    transition: stroke-dashoffset .5s linear;
+
+}
+
+/* ===========================
+   Session Information
+=========================== */
+
+.session-info {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+
+}
+
+.session-box {
+
+    text-align: center;
+
+    padding: 15px 25px;
+
+    background: var(--background);
+
+    border-radius: 16px;
+
+    border: 1px solid var(--border);
+
+}
+
+.session-box h4 {
+
+    color: var(--text-light);
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+}
+
+.session-box span {
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+}
+
+/* ===========================
+   Notification Badge
+=========================== */
+
+.timer-status {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background: var(--success);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+.timer-status.break {
+
+    background: var(--warning);
+
+}
+
+.timer-status.finished {
+
+    background: var(--danger);
+
+}
+
+/* ===========================
+   Floating Animation
+=========================== */
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-6px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:768px){
+
+    .countdown{
+
+        gap:16px;
+
+    }
+
+    .time-box{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .time-box span{
+
+        font-size:36px;
+
+    }
+
+    #pomodoroDisplay,
+    #studyDisplay{
+
+        font-size:48px;
+
+    }
+
+    .buttons button{
+
+        width:100%;
+
+    }
+
+}
+

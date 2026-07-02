@@ -1,0 +1,469 @@
+/* ==========================================================
+   A/L Exam Countdown
+   File: css/responsive.css
+   Responsive Styles
+========================================================== */
+
+/* ==========================================================
+   Large Screens (≤1200px)
+========================================================== */
+
+@media (max-width:1200px){
+
+    .container{
+        padding:25px;
+    }
+
+    .dashboard-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .countdown{
+        gap:18px;
+    }
+
+}
+
+/* ==========================================================
+   Tablets (≤992px)
+========================================================== */
+
+@media (max-width:992px){
+
+    body{
+        display:block;
+    }
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+    .sidebar h1{
+
+        text-align:center;
+
+        margin-bottom:20px;
+
+    }
+
+    .sidebar nav{
+
+        flex-direction:row;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:10px;
+
+    }
+
+    .sidebar nav a{
+
+        padding:10px 16px;
+
+    }
+
+    .container{
+
+        width:100%;
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    .header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================================================
+   Mobile Landscape (≤768px)
+========================================================== */
+
+@media (max-width:768px){
+
+    .header h2{
+
+        font-size:26px;
+
+    }
+
+    .header p{
+
+        font-size:14px;
+
+    }
+
+    .dashboard-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .panel{
+
+        padding:20px;
+
+    }
+
+    .countdown{
+
+        justify-content:center;
+
+        gap:15px;
+
+    }
+
+    .time-box{
+
+        width:110px;
+
+        height:110px;
+
+    }
+
+    .time-box span{
+
+        font-size:34px;
+
+    }
+
+    .time-box p{
+
+        font-size:13px;
+
+    }
+
+    #pomodoroDisplay,
+    #studyDisplay{
+
+        font-size:48px;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+    }
+
+    .buttons button{
+
+        width:100%;
+
+    }
+
+    .modes{
+
+        flex-direction:column;
+
+    }
+
+    .modes button{
+
+        width:100%;
+
+    }
+
+    .task-input{
+
+        flex-direction:column;
+
+    }
+
+    .task-input input,
+    .task-input button{
+
+        width:100%;
+
+    }
+
+    .stats-row{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .subject-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .calendar-grid{
+
+        gap:6px;
+
+    }
+
+    .calendar-day{
+
+        padding:10px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================================
+   Small Phones (≤576px)
+========================================================== */
+
+@media (max-width:576px){
+
+    html{
+
+        font-size:15px;
+
+    }
+
+    .container{
+
+        padding:15px;
+
+    }
+
+    .header{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .header button{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+    .countdown{
+
+        display:grid;
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:12px;
+
+    }
+
+    .time-box{
+
+        width:100%;
+
+        height:100px;
+
+    }
+
+    .time-box span{
+
+        font-size:30px;
+
+    }
+
+    #pomodoroDisplay,
+    #studyDisplay{
+
+        font-size:40px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+    .card h2{
+
+        font-size:28px;
+
+    }
+
+    .panel{
+
+        padding:18px;
+
+    }
+
+    blockquote{
+
+        font-size:16px;
+
+    }
+
+    footer{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================================
+   Extra Small Phones (≤400px)
+========================================================== */
+
+@media (max-width:400px){
+
+    .sidebar h1{
+
+        font-size:20px;
+
+    }
+
+    .sidebar nav{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar nav a{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .header h2{
+
+        font-size:22px;
+
+    }
+
+    .countdown{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .time-box{
+
+        height:95px;
+
+    }
+
+    #pomodoroDisplay,
+    #studyDisplay{
+
+        font-size:34px;
+
+    }
+
+    .stats-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* ==========================================================
+   Landscape Orientation
+========================================================== */
+
+@media (orientation:landscape) and (max-height:600px){
+
+    .sidebar{
+
+        padding:15px;
+
+    }
+
+    .panel{
+
+        padding:18px;
+
+    }
+
+    .time-box{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+    #pomodoroDisplay,
+    #studyDisplay{
+
+        font-size:42px;
+
+    }
+
+}
+
+/* ==========================================================
+   Print Styles
+========================================================== */
+
+@media print{
+
+    .sidebar,
+    .buttons,
+    .modes,
+    #themeToggle,
+    footer{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+        color:#000;
+
+    }
+
+    .container{
+
+        width:100%;
+
+        margin:0;
+
+        padding:0;
+
+    }
+
+    .panel{
+
+        box-shadow:none;
+
+        border:1px solid #ccc;
+
+        break-inside:avoid;
+
+    }
+
+}
+
