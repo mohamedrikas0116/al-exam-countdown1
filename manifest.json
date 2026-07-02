@@ -1,0 +1,129 @@
+{
+  "name": "A/L Exam Countdown & Study Dashboard",
+  "short_name": "A/L Countdown",
+  "description": "An advanced Progressive Web App for Sri Lankan G.C.E. Advanced Level students. Includes exam countdown, Pomodoro timer, study timer, tasks, analytics, calendar, notifications, and offline support.",
+  "lang": "en",
+  "dir": "ltr",
+
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+
+  "background_color": "#f4f7fc",
+  "theme_color": "#2563eb",
+
+  "categories": [
+    "education",
+    "productivity",
+    "utilities"
+  ],
+
+  "icons": [
+    {
+      "src": "assets/icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "assets/images/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Dashboard"
+    },
+    {
+      "src": "assets/images/screenshot-mobile.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile Dashboard"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Pomodoro Timer",
+      "short_name": "Pomodoro",
+      "description": "Open the Pomodoro timer",
+      "url": "./index.html#pomodoro",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Study Timer",
+      "short_name": "Study",
+      "description": "Start a study session",
+      "url": "./index.html#study",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Today's Tasks",
+      "short_name": "Tasks",
+      "description": "View today's study tasks",
+      "url": "./index.html#tasks",
+      "icons": [
+        {
+          "src": "assets/icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
+

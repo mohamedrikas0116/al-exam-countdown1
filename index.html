@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2563eb">
+    <meta name="description" content="Advanced Sri Lankan A/L Exam Countdown & Study Dashboard">
+
+    <title>A/L Exam Countdown | Study Dashboard</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/timer.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="icon" href="assets/icons/icon-192.png">
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- Sidebar -->
+<!-- ========================= -->
+
+<aside class="sidebar">
+
+    <h1>📚 A/L Dashboard</h1>
+
+    <nav>
+
+        <a href="#dashboard">🏠 Dashboard</a>
+
+        <a href="#countdown">⏳ Countdown</a>
+
+        <a href="#pomodoro">🍅 Pomodoro</a>
+
+        <a href="#study">📖 Study Timer</a>
+
+        <a href="#tasks">✅ Tasks</a>
+
+        <a href="#calendar">📅 Calendar</a>
+
+        <a href="#analytics">📊 Analytics</a>
+
+        <a href="#quotes">💡 Quotes</a>
+
+        <a href="#settings">⚙ Settings</a>
+
+    </nav>
+
+</aside>
+
+<!-- ========================= -->
+<!-- Main -->
+<!-- ========================= -->
+
+<main class="container">
+
+<!-- ========================= -->
+<!-- Header -->
+<!-- ========================= -->
+
+<header class="header">
+
+<div>
+
+<h2>Advanced A/L Exam Countdown</h2>
+
+<p>Stay focused. Study smarter.</p>
+
+</div>
+
+<div class="header-actions">
+
+<button id="themeToggle">
+
+🌙
+
+</button>
+
+</div>
+
+</header>
+
+<!-- ========================= -->
+<!-- Dashboard Cards -->
+<!-- ========================= -->
+
+<section class="dashboard-grid">
+
+<div class="card">
+
+<h3>Total Study Today</h3>
+
+<h2 id="todayStudy">
+
+00:00
+
+</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Current Streak</h3>
+
+<h2 id="streak">
+
+0 Days
+
+</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Completed Tasks</h3>
+
+<h2 id="completedTasks">
+
+0
+
+</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Focus Score</h3>
+
+<h2 id="focusScore">
+
+100%
+
+</h2>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Countdown -->
+<!-- ========================= -->
+
+<section id="countdown" class="panel">
+
+<h2>⏳ A/L Exam Countdown</h2>
+
+<div class="countdown">
+
+<div class="time-box">
+
+<span id="days">000</span>
+
+<p>Days</p>
+
+</div>
+
+<div class="time-box">
+
+<span id="hours">00</span>
+
+<p>Hours</p>
+
+</div>
+
+<div class="time-box">
+
+<span id="minutes">00</span>
+
+<p>Minutes</p>
+
+</div>
+
+<div class="time-box">
+
+<span id="seconds">00</span>
+
+<p>Seconds</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Pomodoro -->
+<!-- ========================= -->
+
+<section id="pomodoro" class="panel">
+
+<h2>🍅 Pomodoro Timer</h2>
+
+<h1 id="pomodoroDisplay">
+
+25:00
+
+</h1>
+
+<div class="buttons">
+
+<button id="startPomodoro">
+
+Start
+
+</button>
+
+<button id="pausePomodoro">
+
+Pause
+
+</button>
+
+<button id="resetPomodoro">
+
+Reset
+
+</button>
+
+</div>
+
+<div class="modes">
+
+<button data-mode="25">
+
+25 / 5
+
+</button>
+
+<button data-mode="50">
+
+50 / 10
+
+</button>
+
+<button data-mode="custom">
+
+Custom
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Study Timer -->
+<!-- ========================= -->
+
+<section id="study" class="panel">
+
+<h2>📖 Study Timer</h2>
+
+<h1 id="studyDisplay">
+
+00:00:00
+
+</h1>
+
+<div class="buttons">
+
+<button id="studyStart">
+
+Start
+
+</button>
+
+<button id="studyPause">
+
+Pause
+
+</button>
+
+<button id="studyReset">
+
+Reset
+
+</button>
+
+</div>
+
+<select id="subject">
+
+<option>Accounting</option>
+
+<option>Business Studies</option>
+
+<option>Economics</option>
+
+<option>ICT</option>
+
+<option>Other</option>
+
+</select>
+
+</section>
+
+<!-- ========================= -->
+<!-- Tasks -->
+<!-- ========================= -->
+
+<section id="tasks" class="panel">
+
+<h2>✅ Today's Tasks</h2>
+
+<div class="task-input">
+
+<input
+
+type="text"
+
+id="taskInput"
+
+placeholder="Enter new task">
+
+<button id="addTask">
+
+Add
+
+</button>
+
+</div>
+
+<ul id="taskList">
+
+</ul>
+
+</section>
+
+<!-- ========================= -->
+<!-- Calendar -->
+<!-- ========================= -->
+
+<section id="calendar" class="panel">
+
+<h2>📅 Study Calendar</h2>
+
+<div id="calendarContainer">
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- Analytics -->
+<!-- ========================= -->
+
+<section id="analytics" class="panel">
+
+<h2>📊 Analytics</h2>
+
+<canvas id="studyChart">
+
+</canvas>
+
+</section>
+
+<!-- ========================= -->
+<!-- Quote -->
+<!-- ========================= -->
+
+<section id="quotes" class="panel">
+
+<h2>💡 Daily Motivation</h2>
+
+<blockquote id="dailyQuote">
+
+Loading...
+
+</blockquote>
+
+</section>
+
+<!-- ========================= -->
+<!-- Footer -->
+<!-- ========================= -->
+
+<footer>
+
+<p>
+
+Made with ❤️ for Sri Lankan A/L Students
+
+</p>
+
+</footer>
+
+</main>
+
+<!-- ========================= -->
+<!-- Audio -->
+<!-- ========================= -->
+
+<audio id="alarm">
+
+<source src="assets/sounds/alarm.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- ========================= -->
+<!-- JavaScript -->
+<!-- ========================= -->
+
+<script src="js/storage.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/pomodoro.js"></script>
+<script src="js/studyTimer.js"></script>
+<script src="js/tasks.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/quotes.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/notifications.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+    });
+}
+</script>
+
+</body>
+</html>
